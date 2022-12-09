@@ -13,10 +13,16 @@ const mockUpStrand = () => {
   return newStrand;
 };
 
-
-
-
-
-
-
-
+function pAequorFactory(id,dna) {
+  var pAequor = {
+    id:id,
+    dna:dna,
+    mutate: function mutate(){
+      //choose random base
+      var randomNumber = math.floor(math.random()*this.dna.length-1);
+      this.dna[randomNumber] = returnRandBase(); 
+    }
+  }
+  return pAequor
+  
+}
